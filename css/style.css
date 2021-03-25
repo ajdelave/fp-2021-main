@@ -48,6 +48,7 @@ footer {
    animation-iteration-count: 1;
    animation-duration: 5s;
    width: 75px;
+   max-width: 75px;
  }
 
 @keyframes logo_grow{
