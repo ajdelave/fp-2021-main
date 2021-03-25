@@ -363,6 +363,10 @@ a.skip:focus{
 @media only screen and (max-device-width: 1366px) {
 	.parallax {
 	  background-attachment: scroll;
+  }
+  #logo{
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -382,4 +386,3 @@ a.skip:focus{
 	background-repeat: no-repeat;
 	background-size: contain;
 */
-}
