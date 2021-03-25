@@ -1,0 +1,384 @@
+
+/* Starter styling for pages */
+body{
+	margin: 0;
+	padding: 0px;
+	font-size: 16pt; 
+	background-color: #F3F2EF;
+	font-family: 'Blinker', sans-serif;
+}
+
+header{
+	background-color: #F3F2EF;
+	border-bottom: 3px solid #E10600;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 5px;
+}
+
+h1 {
+	border: 2px dashed black;
+	font-weight: bold;
+	margin: 10px 0;
+	text-align: center;
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 1.2em; 
+	font-weight: bold;
+}
+
+p, h1, h2 {
+    padding: 10px;
+}
+
+/* Simple footer styling */
+footer {
+	border-top: 3px solid #E10600;
+	display: flex;
+  	flex-direction: row;
+	justify-content: space-between
+}
+
+
+#logo {
+   animation-name: logo_grow;
+   animation-iteration-count: 1;
+   animation-duration: 5s;
+   width: 75px;
+ }
+
+@keyframes logo_grow{
+  from {opacity: 0; width: 25px;}
+  to {opacity: 1; width: 75px;}
+}
+
+/* Navigation Styling*/
+.nav_links{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+
+.nav_item a{
+	color: black;
+	text-decoration: none;
+  }
+  
+.nav_item a:hover, a:focus{
+  color: #E10600;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+
+#main {
+	padding: 8px;
+}
+
+/* Skip to Main*/
+a.skip{
+	background: #F3F2EF;
+	border: #E10600;
+	left: 0;
+	padding: 6px;
+	margin-left: 5px;
+	position: absolute;
+	top: -40px;
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+	color: black;
+}
+  
+a.skip:focus{
+	top:20px;
+	color: black;
+	text-decoration-style: dotted;
+}
+
+/* Style the current page in the header */
+#current {
+	color: #E10600;
+	font-size: 140%;
+}
+
+/* Style image on landing */
+#image1 {
+	margin: 4pt;
+	border: 2px dashed #E10600;
+	
+}
+
+/* Make the image of the F1 car have parralax */
+.parallax {
+	background-image: url("imgs/car1.jpg");
+	min-height: 200px; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+
+/*Styling for the Team flip cards*/
+/* Core code refrenced from https://1stwebdesigner.com/learn-how-to-create-flip-cards-using-css/*/
+.post-wrap {
+    min-width: 300px;
+    max-width: 380px;
+    height: 420px;
+    perspective: 1000px;
+    flex: 1;
+    margin: 0 15px 30px;
+}
+
+.post {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.post-front, .post-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.post-back {
+    transform: rotateY(180deg);
+}
+
+.post-wrap:hover .post {
+    transform: rotateY(180deg);
+}
+
+.post-wrap:focus .post {
+	transform: rotateY(180deg);
+}
+
+.post-img {
+    background-size: contain;
+    background-position: center;
+	background-repeat: no-repeat;
+	height: 300px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.post-info {
+    padding: 20px 30px 30px;
+	text-align: center;
+}
+
+.post-info span {
+    font-size: 0.8rem;
+    color: #808080;
+}
+
+.post-info h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+
+.post-back {
+    background-color: #ffffff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: flex-start; 
+}
+.post-back h2{
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding-top: 5px;
+}
+
+.post-back p {
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.post-excerpt {
+	font-size: 17px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px;
+	padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-intro {
+	margin: auto 0;
+	text-align: center;
+}
+
+/* Grid for Circuits */
+/* Core code refrenced from https://www.imarketinx.de/artikel/responsive-image-gallery-with-css-grid.html*/
+
+.gallery-grid {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 600px));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery-frame {
+  padding: .5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  background-color: #333;
+  color: #d9d9d9;
+  align-self: center;
+  margin: 1rem;
+}
+
+.gallery-img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.gallery-img:hover {
+  opacity: .7;
+}
+	
+.gallery-frame:hover {
+	border: 2px solid #E10600;
+}
+.gallery-frame:focus {
+	border: 2px solid #E10600;
+}
+
+/* An additional grid for Drivers*/
+.grid { 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+
+.grid > article {
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+}
+.grid > article img {
+  max-width: 100%;
+}
+
+.text h3 {
+	font-weight: bold;
+}
+
+.text p {
+	padding: 3px;
+}
+.text {
+  padding: 0 20px 20px;
+  text-align: center;
+}
+
+
+
+/* Style the helmet images using an additional Flexbox*/
+.helm-flex {
+	min-height: 600px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.helm-container {
+  font-weight: bold;
+  vertical-align: top;
+  border: 2px dashed #E10600;
+  margin: 10px;
+  width: 12em
+}
+
+.helm-container p {
+ color: white;
+}
+
+.helm-main {
+  background: #333;
+  flex: 1;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.helm-image {
+  flex: 1;
+  height: 100%;
+}
+
+.helm-header {
+	text-align: center;
+	font-size: 1.6em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+/* Stop flip cards from flipping with 3-d effect*/
+	.post {
+		transition: none;
+		transform-style: none;   
+	}
+	.post-wrap:hover .post {
+		transition: none;
+		transform-style: none;   
+	}
+	.post-wrap:focus .post {
+		transition: none;
+		transform-style: none;   
+	}
+/* Stop F1 logo grow in footer*/	
+	#logo {
+		animation: none;
+	}
+}
+
+@media only screen and (max-device-width: 1366px) {
+	.parallax {
+	  background-attachment: scroll;
+}
+
+@media only screen and (max-width: 1024px) {
+	.text-wrapper {
+	  opacity: 1;
+	  justify-content: flex-end;
+	  text-shadow: 1px 1px 1px #000;
+	}
+	.title {
+	  margin-bottom: 1em;
+	}
+  }
+
+/*	Will be used later for parallax on larger views
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+*/
+}
