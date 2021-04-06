@@ -6,6 +6,7 @@ body{
 	font-size: 16pt; 
 	background-color: #F3F2EF;
 	font-family: 'Blinker', sans-serif;
+  box-sizing: border-box;
 }
 
 header{
@@ -115,13 +116,17 @@ a.skip:focus{
 
 /* Make the image of the F1 car have parralax */
 .parallax {
-	background-image: url("imgs/car1.jpg");
+	background-image: url("../imgs/car1.jpg");
 	min-height: 200px; 
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: contain;
 }
 
+.parralax-body {
+  height: auto;
+  
+}
 
 /*Styling for the Team flip cards*/
 /* Core code refrenced from https://1stwebdesigner.com/learn-how-to-create-flip-cards-using-css/*/
@@ -340,6 +345,50 @@ a.skip:focus{
 	font-size: 1.6em;
 }
 
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #E10600;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #E10600;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+
+
 @media (prefers-reduced-motion: reduce) {
 /* Stop flip cards from flipping with 3-d effect*/
 	.post {
@@ -359,15 +408,63 @@ a.skip:focus{
 		animation: none;
 	}
 }
-
 @media only screen and (max-device-width: 1366px) {
-	.parallax {
-	  background-attachment: scroll;
-  }
   #logo{
     display: none !important;
   }
 }
+
+@media only screen and (min-device-width: 768px){
+  .parallax {
+    background-image: url("../imgs/parallax.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .nav_links {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .helm-header {
+    margin:30px;
+  }
+  .helm-flex{
+    flex-direction: row;
+  }
+
+  .helm-container {
+    width: 14em;
+  }
+
+@media only screen and (min-device-width: 1024px){
+  .grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .helm-container {
+    width: 17em;
+  }
+  .helm-flex{
+    margin: 0px;
+    padding:0px;
+  }
+
+  .nav_links {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+}
+
 
 @media only screen and (max-width: 1024px) {
 	.text-wrapper {
@@ -378,11 +475,5 @@ a.skip:focus{
 	.title {
 	  margin-bottom: 1em;
 	}
-  }
-
-/*	Will be used later for parallax on larger views
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: contain;
-*/
+}
+}
