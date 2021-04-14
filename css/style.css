@@ -105,6 +105,7 @@ a.skip:focus{
 #current {
 	color: #E10600;
 	font-size: 140%;
+  font-weight: bold;
 }
 
 /* Style image on landing */
@@ -403,6 +404,10 @@ input[type=submit]:hover {
 		transition: none;
 		transform-style: none;   
 	}
+/* Stop parralax effect*/	
+  .parallax{
+    background-attachment: scroll !important;
+  }
 /* Stop F1 logo grow in footer*/	
 	#logo {
 		animation: none;
